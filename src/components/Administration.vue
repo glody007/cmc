@@ -10,6 +10,7 @@
         <v-list-item
           v-for="item in items"
           :key="item.text"
+          :to="item.url"
           link
         >
           <v-list-item-action>
@@ -48,7 +49,7 @@
           justify="center"
           align="center"
         >
-          <Actes></Actes>
+          <router-view></router-view>
         </v-row>
       </v-container>
     </v-content>
@@ -57,7 +58,6 @@
 
 
 <script>
-  import Actes from './acte/Actes';
 
   export default {
     name : 'Administration',
@@ -65,16 +65,16 @@
       source: String,
     },
     components: {
-      Actes,
+
     },
     data: () => ({
       drawer: null,
       items: [
-        { icon: 'mdi-hand-heart', text: 'Actes' },
+        { icon: 'mdi-hand-heart', text: 'Actes' , url: '/acte'},
         { icon: 'mdi-file-document-edit', text: 'Conventions' },
         { icon: 'mdi-account-heart', text: 'Malades' },
         { icon: 'mdi-doctor', text: 'Medicins' },
-        { icon: 'mdi-pill', text: 'Medicaments' },
+        { icon: 'mdi-pill', text: 'Medicaments', url: '/medicament' },
         { icon: 'mdi-handshake', text: 'Partenaire' },
         { icon: 'mdi-office-building', text: 'Societe' },
       ],

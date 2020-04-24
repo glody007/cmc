@@ -14,7 +14,7 @@
       Model
     },
     data: () => ({
-      title : 'Actes',
+      title : 'Medicaments',
       headers : [
         {
           text: 'Nom',
@@ -22,7 +22,7 @@
           sortable: false,
           value: 'name',
         },
-        { text: 'Prix', value: 'calories' },
+        { text: 'Prix', value: 'protein' },
         { text: 'Actions', value: 'actions', sortable: false },
       ],
       datas : [
